@@ -1,0 +1,11 @@
+# Site settings: Custom variableaccessible via {{ site.myvariable }}.
+title: Raphael Raabe
+description: >-
+  Offizielle Webseite des Künstlers Raphael Raabe.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
