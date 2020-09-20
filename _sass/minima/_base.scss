@@ -49,6 +49,26 @@ main {
   display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
 }
 
+
+
+/**
+ * Circular Profile Picture
+ */
+ img[src*="#circularProfile"] {
+  /* display: block;
+  margin-left: auto;
+  margin-right: auto; */
+  border: 1px solid $grey-color-light;
+  margin-right: 20px;
+  float: left;
+  max-width: 20%;
+  max-height: 20%;
+  border-top-left-radius: 50% 50%;
+  border-top-right-radius: 50% 50%;
+  border-bottom-right-radius: 50% 50%;
+  border-bottom-left-radius: 50% 50%;
+}
+
 /**
  * Picture Animation
  */
