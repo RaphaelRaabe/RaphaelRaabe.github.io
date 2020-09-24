@@ -84,8 +84,24 @@ main {
 
 .grid img {
   width: 200px;
-  height: 200px;
   cursor: pointer;
+}
+
+/**
+ * Gallery
+ */
+
+.gallery {
+  margin: 10px 50px;
+}
+
+.gallery img {
+  transition: 0.3s;
+  padding: 15px;
+}
+
+.gallery img:hover{
+  transform: scale(1.05);
 }
 
 /**
