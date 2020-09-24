@@ -4,6 +4,7 @@ title: Galerie
 permalink: /gallery/
 ---
 
+
 <div class="gallery grid">
 
 {% for image in site.static_files %}
