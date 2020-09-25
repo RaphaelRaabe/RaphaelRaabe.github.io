@@ -87,23 +87,6 @@ main {
 }
 
 /**
- * Gallery
- */
-
-.gallery {
-  margin: 10px 50px;
-}
-
-.gallery img {
-  transition: 0.3s;
-  padding: 15px;
-}
-
-.gallery img:hover{
-  transform: scale(1.05);
-}
-
-/**
  * Picture Animation
  */
  @keyframes transitionIn {
@@ -139,9 +122,15 @@ img[src*="#transitionContainer"] {
   float: left;
 }
 .my-gallery img {
+  transition: 0.3s;
   width: 100%;
   height: auto;
 }
+
+.my-gallery img:hover{
+  transform: scale(1.05);
+}
+
 .my-gallery figure {
   display: block;
   float: left;
