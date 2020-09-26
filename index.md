@@ -21,4 +21,4 @@ Ach das wird wieder zu philosophisch ... Ich möchte an dieser Stelle einfach ei
 > I paint what I paint without meditating on story."
 
 
-Ich habe leider nicht die originale polnische Version des Zitats gefunden, aber das ist irrelevant. Relevant ist nur, dass es bei den hier präsentierten Werken um keine Geschichten geht. Ich habe einfach die Porträts derjenigen Personen gemalt, die ich bewundere, schätze oder liebe. Das ist alles.
+Ich habe leider nicht die originale polnische Version des Zitats gefunden, aber das ist irrelevant. Relevant ist nur, dass es bei den hier präsentierten Werken um keine Geschichten geht. Es gibt nichts zu analysieren oder zu interpretieren. Ich habe einfach die Porträts derjenigen Personen gemalt, die ich bewundere, schätze oder liebe. Es ging nur um die reine Glückseligkeit, die ich im Kreationsprozess verspürt habe, egal ob es sich bei den Motiven um gefühlvolle Gesichter oder um wunderschöne Wesen der Natur handelte. Das ist alles.
