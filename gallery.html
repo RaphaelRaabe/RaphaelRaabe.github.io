@@ -7,6 +7,9 @@ permalink: /gallery/
 <div class="my-gallery">
   {% for image in site.static_files %}
   {% if image.path contains 'img/paintings' %}
+  <p>site.base: {{ site.baseurl }}</p><br/>
+  <p>imagepath: {{ image.path }}</p><br/>
+
   <figure>
     <a href="{{ site.baseurl }}{{ image.path }}" filename="{{ image.basename }}"><img src="{{ site.baseurl }}{{ image.path }}" alt="{{ image.basename }}"></a>
   </figure>
