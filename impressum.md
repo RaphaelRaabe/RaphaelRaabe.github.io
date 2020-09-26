@@ -8,6 +8,9 @@ permalink: /impressum/
 
 Da es sich hierbei um eine rein persönliche Webseite handelt, die auf keinster Weise gewerblich oder geschäftlich genutzt wird, wird auf die Angaben gemäß § 5 TGM verzichtet. (§ 55 Rundfunkstaatsvertrag).
 
+### Kontakt
+<a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a>
+
 ## Verbraucherstreitbeilegung/ Universalschlichtungsstelle
 
 Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.

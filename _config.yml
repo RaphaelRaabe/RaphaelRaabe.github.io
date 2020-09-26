@@ -1,5 +1,6 @@
 # Site settings: Custom variableaccessible via {{ site.myvariable }}.
 title: Raphael Raabe
+email: raphael.ragnar.raabe@gmail.com
 description: >-
   Offizielle Webseite des Künstlers Raphael Raabe.
 baseurl: "" # the subpath of your site, e.g. /blog

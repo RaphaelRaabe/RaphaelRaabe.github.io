@@ -13,7 +13,14 @@ done
 echo "name,orig,thumb" > paintings.csv
 
 for f in ../img/paintings/*; do
-  raw=$(readlink -f "$f")
+  if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    raw=$(readlink -f "$f")
+  elif [[ "$OSTYPE" == "darwin"* ]]; then
+    raw=$(greadlink -f "$f")
+  else
+    echo "Unknown OS..." && exit
+  fi
+  
   filename="${raw##*/}"
 
   name="${filename%.*}"
