@@ -4,18 +4,11 @@ title: Galerie
 permalink: /gallery/
 ---
 
-<div class="my-gallery mosaic-row">
+<div class="my-gallery">
   {% for painting in site.data.paintings %}
-  {% assign r = forloop.index | modulo: 4 %}
-  {% if r == 1 %}
-  <div class="mosaic-column">
-  {% endif %}
   <figure>
     <a href="{{ painting.orig }}" filename="{{ painting.name }}"><img src="{{ painting.thumb }}" alt="{{ painting.name }}"></a>
   </figure>
-  {% if r == 0 %}
-  </div>
-  {% endif %}
   {% endfor %}    
 </div>
 
