@@ -7,7 +7,7 @@ permalink: /gallery/
 <div class="my-gallery">
   {% for painting in site.data.paintings %}
   <figure>
-    <a href="{{ painting.orig }}" filename="{{ painting.name }}"><img src="{{ painting.thumb }}" alt="{{ painting.name }}"></a>
+    <a href="{{ painting.orig }}" filename="{{ painting.name }}"><img data-src="{{ painting.thumb }}" alt="{{ painting.name }}"></a>
   </figure>
   {% endfor %}    
 </div>
@@ -287,3 +287,5 @@ permalink: /gallery/
     // execute above function
     initPhotoSwipeFromDOM('.my-gallery'); 
 </script>
+
+<script type="text/javascript" src="/js/lazyLoader.js"></script>
