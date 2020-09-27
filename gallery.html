@@ -7,7 +7,7 @@ permalink: /gallery/
 <div class="my-gallery mosaic-row">
   {% for painting in site.data.paintings %}
   {% assign r = forloop.index | modulo: 4 %}
-  {% if r == 0 %}
+  {% if r == 1 %}
   <div class="mosaic-column">
   {% endif %}
   <figure>
@@ -104,7 +104,6 @@ permalink: /gallery/
             for (var i = 0; i < numNodes; i++) {
 
                 figureEl = thumbElements[i]; // <figure> element
-
                 // include only element nodes 
                 if (figureEl.nodeType !== 1) {
                     continue;
@@ -113,7 +112,7 @@ permalink: /gallery/
                 linkEl = figureEl.children[0]; // <a> element
                 
                 tmp = linkEl.getAttribute('filename').split('-');
-
+                console.log(tmp);
                 size = tmp[tmp.length - 1].split('x');
                 // create slide object
                 item = {
