@@ -12,6 +12,4 @@ plugins:
   - jekyll-feed
 
 exclude:
-  - /lightbox2/DEPLOY.md
-  - /lightbox2/README.md
-  - /lightbox2/ROADMAP.md
+  - /exclude
