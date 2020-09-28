@@ -1,5 +1,7 @@
 # Site settings: Custom variableaccessible via {{ site.myvariable }}.
 title: Raphael Raabe
+undertitle: Seline Bezen
+friendsURL: https://selinebezen.github.io/
 email: raphael.ragnar.raabe@gmail.com
 description: >-
   Offizielle Webseite des Künstlers Raphael Raabe.
