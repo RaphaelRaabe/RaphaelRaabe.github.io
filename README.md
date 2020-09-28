@@ -6,8 +6,8 @@ Offizielle Webseite des Künstlers Raphael Raabe.
 
 ### Benutzte Webtechnologien
 
-- [Jekyll Static Site Generator!](https://jekyllrb.com/)
-- [PhotoSwipe!](https://photoswipe.com/)
+- [Jekyll Static Site Generator](https://jekyllrb.com/)
+- [PhotoSwipe](https://photoswipe.com/)
 
 ### Benutzte Sprachen
 
