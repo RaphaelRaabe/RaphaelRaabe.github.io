@@ -27,7 +27,7 @@ done
 
 for f in *.jpg; do
 # nf="thumb.${f%-*}.jpg"
-  nf="thumb.$f.jpg"
+  nf="thumb.$f"
   convert -thumbnail "$w" "$f" "$nf"
 done
 

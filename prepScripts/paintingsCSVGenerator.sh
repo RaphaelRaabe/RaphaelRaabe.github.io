@@ -25,6 +25,7 @@ for f in ../img/paintings/*; do
 
   name="${filename%.*}"
   orig="${raw#*"$dir_repo"}"
-  thumb="/img/thumb/thumb.${name%-*}.jpg"
+  # thumb="/img/thumb/thumb.${name%-*}.jpg"
+  thumb="/img/thumb/thumb.$name.jpg"
   echo "$name,$orig,$thumb" >> paintings.csv
 done
