@@ -1,6 +1,9 @@
 ---
 layout: home
+permalink: /en/
 ---
+
+<a class="site-language-change" href="/">&nbsp;De&nbsp;</a>
 
 ![Maske](/img/profil.jpg#circularProfile)
 
