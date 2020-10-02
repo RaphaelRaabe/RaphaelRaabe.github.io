@@ -1,5 +1,6 @@
 ---
 layout: home
+permalink: /
 ---
 
 <a class="site-language-change" href="/en/">&nbsp;En&nbsp;</a>
