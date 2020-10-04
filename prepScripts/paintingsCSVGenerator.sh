@@ -1,6 +1,7 @@
 dir_data="_data"
 dir_repo="RaphaelRaabe.github.io"
 dir_cur="$PWD"
+fil_csv="paintings.csv"
 
 [ "$dir_cur" == *"$dir_repo"* ] && echo "Go to '$dir_repo' repository dir!" && exit
 
@@ -10,9 +11,9 @@ done
 
 [ "${PWD##*/}" == "$dir_repo" ] && cd $dir_data
 
-echo "name,orig,thumb" > paintings.csv
+echo "name,orig,thumb" > $fil_csv
 
-for f in ../img/paintings/*; do
+for f in ../img/paintings/*.jpg; do
   if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     raw=$(readlink -f "$f")
   elif [[ "$OSTYPE" == "darwin"* ]]; then
@@ -25,7 +26,7 @@ for f in ../img/paintings/*; do
 
   name="${filename%.*}"
   orig="${raw#*"$dir_repo"}"
-  # thumb="/img/thumb/thumb.${name%-*}.jpg"
-  thumb="/img/thumb/thumb.$name.jpg"
-  echo "$name,$orig,$thumb" >> paintings.csv
+  thumb="/img/thumb/thumb.${name%-*}.jpg"
+  # thumb="/img/thumb/thumb.$name.jpg"
+  echo "$name,$orig,$thumb" >> $fil_csv
 done
