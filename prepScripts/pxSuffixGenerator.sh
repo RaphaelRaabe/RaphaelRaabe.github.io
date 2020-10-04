@@ -13,6 +13,11 @@ done
 [ "${PWD##*/}" == "$dir_repo" ] && cd $dir_paintings
 
 for f in *.jpg; do
+  nf="${f%-*}";
+  [ "$f" != "$nf" ] && mv "$f" "$nf" && mv "$nf" "$nf.jpg";
+done
+
+for f in *.jpg; do
   suffix=$(identify -format '%wx%h' "$f")
   mv "$f" "${f%.*}-$suffix.jpg"
 done

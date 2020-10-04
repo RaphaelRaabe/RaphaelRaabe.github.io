@@ -13,7 +13,7 @@ done
 
 echo "name,orig,thumb" > $fil_csv
 
-for f in ../img/paintings/*; do
+for f in ../img/paintings/*.jpg; do
   if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     raw=$(readlink -f "$f")
   elif [[ "$OSTYPE" == "darwin"* ]]; then

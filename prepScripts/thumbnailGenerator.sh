@@ -26,8 +26,8 @@ while [[ -n ${w//[0-9]/} ]]; do
 done
 
 for f in *.jpg; do
-# nf="thumb.${f%-*}.jpg"
-  nf="thumb.$f"
+  nf="thumb.${f%-*}.jpg"
+# nf="thumb.$f"
   convert -thumbnail "$w" "$f" "$nf"
 done
 
