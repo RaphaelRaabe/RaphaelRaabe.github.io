@@ -7,9 +7,9 @@ permalink: /en/
 
 ![Maske](/img/profil.jpg#circularProfile)
 
-I am Raphael Raabe. That is not quite true. That is only a artist name. Actually, I don't know who I am. Even if my real name were here, my first sentence would not be true. Because I am definitely not my name. Are you your name?
+I am Raphael Raabe. That is not quite true. That is only an artist name. Actually, I don't know who I am. Even if my real name were here, my first sentence would not be true, because I am definitely not my name. Are you your name?
 
-I've been asking myself for quite some time who (or what) I really am. When I say "real", then I really mean "REAL"! Most people tell a story when they have to give an answer to this question. Ironically, they even believe in it like a child believes in Santa Claus. I hope I did not disturb you. You are certainly not here to contemplate on some thousand year old philosophical questions. That's not what this page is about.
+I've been asking myself for quite some time who (or what) I really am. When I say "real", then I really mean "REAL"! Most people tell a story when they have to give an answer to this question. Ironically, they even believe in it like a child believes in Santa Claus. I hope I did not disturb you. You are certainly not here to contemplate on some thousand-year-old philosophical questions. That's not what this page is about.
 
 Nevertheless, most of the artworks presented here refer to something we strongly identify with: our face. We look in the mirror every day and feel a constant, continuous sense of the existence of an ego, although in reality we die and are reborn at every moment. This is the overlooked obvious. Our faces serve as representatives to the outside world. Sometimes they support us as a mask for implicit denial of the truth. Mostly however, they help us in communicating with our fellow human beings. Infants even communicate with the outside world to a large extent via their facial expressions.
 
