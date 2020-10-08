@@ -8,7 +8,9 @@ permalink: /
 
 ![Maske](/img/profil.jpg#circularProfile)
 
-Ich bin Raphael Raabe. Das stimmt nicht ganz. Das ist nur ein Künstlername. Eigentlich weiß ich nicht, wer ich bin. Selbst wenn hier mein echter Name stünde, würde mein erster Satz nicht wahr sein. Ich bin nämlich definitiv nicht mein Name. Bist Du etwa Dein Name?
+Ich bin Raphael Raabe. Das stimmt nicht ganz. Das ist nur ein Künstlername. Eigentlich weiß ich nicht, wer ich bin. Selbst wenn hier mein echter Name stünde, würde mein erster Satz nicht wahr sein. Ich bin nämlich definitiv nicht mein Name.
+
+Bist Du etwa Dein Name?
 
 Ich frage mich seit geraumer Zeit, wer (oder was) ich wirklich bin. Wenn ich sage "wirklich", dann meine ich wirklich "WIRKLICH"! Die meisten Menschen erzählen eine Geschichte, wenn sie eine Antwort auf diese Frage geben müssen. Ironischerweise glauben sie sogar daran, wie ein Kind an den Weihnachtsmann. Ich hoffe, ich habe Dich nicht verstört. Du bist sicherlich nicht hier, um über irgendwelche tausend Jahre alten, philosophischen Fragen zu kontemplieren. Darum soll es hier auch nicht gehen.
 
