@@ -1,16 +1,9 @@
-echo "Run 'sudo apt-get install imagemagick' before executing this script!"
+#!/usr/bin/env bash
 
-dir_paintings="img/paintings/"
-dir_repo="RaphaelRaabe.github.io"
-dir_cur="$PWD"
+SCRIPTPATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+source "$SCRIPTPATH/00_checkDir.sh"
 
-[ "$dir_cur" == *"$dir_repo"* ] && echo "Go to '$dir_repo' repository dir!" && exit
-
-while [[ "${PWD##*/}" != "$dir_repo" ]]; do
-  cd ..
-done
-
-[ "${PWD##*/}" == "$dir_repo" ] && cd $dir_paintings
+changeDirToDesired $dir_paintings
 
 echo -e "Thumbnail width?\n-----------------------"
 read w

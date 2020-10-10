@@ -1,15 +1,9 @@
-dir_data="_data"
-dir_repo="RaphaelRaabe.github.io"
-dir_cur="$PWD"
-fil_csv="paintings.csv"
+#!/usr/bin/env bash
 
-[ "$dir_cur" == *"$dir_repo"* ] && echo "Go to '$dir_repo' repository dir!" && exit
+SCRIPTPATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+source "$SCRIPTPATH/00_checkDir.sh"
 
-while [[ "${PWD##*/}" != "$dir_repo" ]]; do
-  cd ..
-done
-
-[ "${PWD##*/}" == "$dir_repo" ] && cd $dir_data
+changeDirToDesired $dir_data
 
 echo "name,orig,thumb" > $fil_csv
 
