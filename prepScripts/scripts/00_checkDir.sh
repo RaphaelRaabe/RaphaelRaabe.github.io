@@ -1,6 +1,15 @@
 #!/usr/bin/env bash
 
+# dpkg -s $1 &> /dev/null
+# 
+# if [ $? -eq 0 ]; then
+#     echo "Package  is installed!"
+# else
+#     echo "Package  is NOT installed!"
+# fi
+
 echo "Run 'sudo apt-get install imagemagick' before executing this script!"
+
 dir_repo="RaphaelRaabe.github.io"
 dir_data="_data"
 dir_paintings="img/paintings/"
