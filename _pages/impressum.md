@@ -6,7 +6,9 @@ permalink: /impressum/
 
 ## Angaben gemäß § 5 TMG
 
-Da es sich hierbei um eine rein persönliche Webseite handelt, die auf keinster Weise gewerblich oder geschäftlich genutzt wird, wird auf die Angaben gemäß § 5 TGM verzichtet. (§ 55 Rundfunkstaatsvertrag).
+Afsaneh Keyvanfar<br/>
+Ferdinand-Wallbrecht-Straße 69<br/>
+30163 Hannover
 
 ### Kontakt
 <a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a>
