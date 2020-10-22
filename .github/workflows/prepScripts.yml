@@ -1,0 +1,57 @@
+name: CI
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: CHECKOUT
+        uses: actions/checkout@v2
+
+      - name: 0. Installing imagemagick
+        run: sudo apt-get install imagemagick
+
+      - name: 1. Generating suffixes for image files
+        run: |
+          for f in *.jpg; do
+            nf="${f%-*}";
+            [ "$f" != "$nf" ] && mv "$f" "$nf" && mv "$nf" "$nf.jpg";
+          done
+
+          for f in *.jpg; do
+            suffix=$(identify -format '%wx%h' "$f")
+            mv "$f" "${f%.*}-$suffix.jpg"
+          done
+        working-directory: img/paintings/
+
+      - name: 2. Generating thumbnails
+        run: |
+          dir_thumb="../thumb"
+          [ ! -d "$dir_thumb" ] && mkdir "$dir_thumb" && echo "thumb directory created"
+          w=200
+          for f in *.jpg; do
+            nf="thumb.${f%-*}.jpg"
+            convert -thumbnail "$w" "$f" "$nf" && mv $nf "$dir_thumb/"
+          done
+        working-directory: img/paintings/
+
+      - name: 3. Writing paintigs.csv-file
+        run: |
+          fil_csv="paintings.csv"
+          echo "name,orig,thumb" > $fil_csv
+          for f in ../img/paintings/*.jpg; do
+            raw=$(readlink -f "$f")
+            filename="${raw##*/}"
+            name="${filename%.*}"
+            orig="/img/paintings/$name.jpg"
+            thumb="/img/thumb/thumb.${name%-*}.jpg"
+            echo "$name,$orig,$thumb" >> $fil_csv
+          done
+        working-directory: _data/
+      - name: F. Commit automated preparation
+        run: |
+          git config --global user.name 'BOT'
+          git config --global user.email 'piano337@users.noreply.github.com'
+          git add .
+          git commit -m "#Bot: automated prepScripts"
+          git push
