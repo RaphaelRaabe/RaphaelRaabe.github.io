@@ -10,8 +10,19 @@ jobs:
 
       - name: 0. Installing imagemagick
         run: sudo apt-get install imagemagick
+      
+      - name: 1. Reducing image sizes to 1920px
+        run: |
+          for f in *.jpg; do
+              width=$(identify -format '%w' "$f")
+              height=$(identify -format '%h' "$f")
+              if [ $width -gt 1920 ] && [ $height -gt 1920 ]; then
+                [ $width -ge $height ] && convert -thumbnail "1920" "$f" "$f" || convert -thumbnail "x1920" "$f" "$f"
+              fi
+          done
+        working-directory: img/paintings/
 
-      - name: 1. Generating suffixes for image files
+      - name: 2. Generating suffixes for image files
         run: |
           for f in *.jpg; do
             nf="${f%-*}";
@@ -24,10 +35,11 @@ jobs:
           done
         working-directory: img/paintings/
 
-      - name: 2. Generating thumbnails
+      - name: 3. Generating thumbnails
         run: |
           dir_thumb="../thumb"
-          [ ! -d "$dir_thumb" ] && mkdir "$dir_thumb" && echo "thumb directory created"
+          [ -d "$dir_thumb" ] && rm -rf "$dir_thumb"
+          mkdir "$dir_thumb"
           w=200
           for f in *.jpg; do
             nf="thumb.${f%-*}.jpg"
@@ -35,7 +47,7 @@ jobs:
           done
         working-directory: img/paintings/
 
-      - name: 3. Writing paintigs.csv-file
+      - name: 4. Writing paintigs.csv-file
         run: |
           fil_csv="paintings.csv"
           echo "name,orig,thumb" > $fil_csv
@@ -48,7 +60,7 @@ jobs:
             echo "$name,$orig,$thumb" >> $fil_csv
           done
         working-directory: _data/
-      - name: F. Commit automated preparation
+      - name: 5. Commit automated preparation
         run: |
           git config --global user.name 'BOT'
           git config --global user.email 'piano337@users.noreply.github.com'
