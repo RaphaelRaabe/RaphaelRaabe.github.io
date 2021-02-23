@@ -9,10 +9,14 @@
       <a class="site-title" rel="author" href="{{ "/" | relative_url }}">
     {%- endif -%} {{ site.title | escape }}</a>
 
+    {%- assign lang_switch_url = page.url -%}
+    {%- if lang_switch_url contains "/blog/" -%}
+      {%- assign lang_switch_url = "/blog/" -%}
+    {%- endif -%}
     {%- if page.url contains "/en/" -%}
-      <a class="site-language-change" href="{{ page.url | replace: "/en/", "/" }}">&#127465;&#127466;</a>
+      <a class="site-language-change" href="{{ lang_switch_url | replace: "/en/", "/" }}">&#127465;&#127466;</a>
     {%- else -%}
-      <a class="site-language-change" href="{{ page.url | prepend: "/en" }}">&#127468;&#127463;</a>
+      <a class="site-language-change" href="{{ lang_switch_url | prepend: "/en" }}">&#127468;&#127463;</a>
     {%- endif -%}
 
     <a class="site-undertitle" href="{{ site.friendsURL }}"><br/>...{{ site.undertitle | escape }}</a>

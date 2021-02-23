@@ -15,6 +15,14 @@ theme: minima
 plugins:
   - jekyll-feed
 
+collections:
+  de-blog:
+    permalink: blog/:year:month:day/:title
+    output: true
+  en-blog:
+    permalink: en/blog/:year:month:day/:title
+    output: true
+
 include:
   - _pages
 
