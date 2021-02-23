@@ -17,18 +17,28 @@
 }
 
 .site-undertitle {
-  @include relative-font-size(0.8);
+  @include relative-font-size(0.9);
   font-weight: 300;
   letter-spacing: -1px;
 }
 
+.site-undertitle-right {
+  @include relative-font-size(1.1);
+  font-weight: 300;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: -1px;
+  padding-left: 50px;
+}
+
 .site-language-change {
   padding: 1px;
-  border-top: 1px solid $grey-color-light;
-  border-bottom: 1px solid $grey-color-light;
   @include relative-font-size(0.8);
   font-weight: 300;
   letter-spacing: 0.5px;
+  padding-left: 1%;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .site-nav {

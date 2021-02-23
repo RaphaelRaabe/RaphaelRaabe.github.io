@@ -2,12 +2,26 @@
 
   <div class="wrapper">
     {%- assign page_paths = site.pages | map: "path" -%}
+
     {%- if page.url contains "/en/" -%}
-      <a class="site-title" rel="author" href="{{ "/en/" | relative_url }}">{{ site.title | escape }}</a>
+      <a class="site-title" rel="author" href="{{ "/en/" | relative_url }}">
     {%- else -%}
-      <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+      <a class="site-title" rel="author" href="{{ "/" | relative_url }}">
+    {%- endif -%} {{ site.title | escape }}</a>
+
+    {%- if page.url contains "/en/" -%}
+      <a class="site-language-change" href="{{ page.url | replace: "/en/", "/" }}">&#127465;&#127466;</a>
+    {%- else -%}
+      <a class="site-language-change" href="{{ page.url | prepend: "/en" }}">&#127468;&#127463;</a>
     {%- endif -%}
+
     <a class="site-undertitle" href="{{ site.friendsURL }}"><br/>...{{ site.undertitle | escape }}</a>
+
+    {%- if page.url contains "/en/" -%}
+      <a class="site-undertitle-right" rel="author" href="/en/blog/">
+    {%- else -%}
+      <a class="site-undertitle-right" rel="author" href="/blog/">
+    {%- endif -%} blog</a>
 
     {%- if page_paths -%}
       <nav class="site-nav">

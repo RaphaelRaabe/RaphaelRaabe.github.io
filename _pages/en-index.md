@@ -4,8 +4,6 @@ language: en
 permalink: /en/
 ---
 
-<a class="site-language-change" href="/">&nbsp;De&nbsp;</a>
-
 ![Maske](/img/profil.jpg#circularProfile)
 
 I am Raphael Raabe. That is not quite true. That is only an artist name. Actually, I don't know who I am. Even if my real name was here, my first sentence would not be true, because I am definitely not my name.
