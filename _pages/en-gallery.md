@@ -4,12 +4,34 @@ title: Gallery
 permalink: /en/galerie/
 ---
 
-<div class="my-gallery">
+<section class="gallery-wrapper">
+    <article class="gallery-content">
+        <a href="/en/galerie/menschen/">
+            <div class="gallery-overlay"></div>
+            <img class="gallery-image"
+                src="/img/thumb.menschen.png"
+                alt="People" />
+            <div class="gallery-text">People</div>
+        </a>
+    </article>
 
-    <a href="/en/galerie/menschen/"><img data-src="{{ painting.thumb }}" alt="People"></a>
+    <article class="gallery-content">
+        <a href="/en/galerie/tiere/">
+            <div class="gallery-overlay"></div>
+            <img class="gallery-image"
+                src="/img/thumb.tiere.png"
+                alt="Animals" />
+            <div class="gallery-text">Animals</div>
+        </a>
+    </article>
 
-    <a href="/en/galerie/tiere/"><img data-src="{{ painting.thumb }}" alt="Animals"></a>
-
-    <a href="/en/galerie/andere/"><img data-src="{{ painting.thumb }}" alt="Other"></a>
-
-</div>
+    <article class="gallery-content">
+        <a href="/en/galerie/andere/">
+            <div class="gallery-overlay"></div>
+            <img class="gallery-image"
+                src="/img/thumb.andere.png"
+                alt="Other" />
+            <div class="gallery-text">Other</div>
+        </a>
+    </article>
+</section>

@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 echo "Run 'sudo apt-get install imagemagick' before executing this script!"
+# montage -geometry +0+0 -mode Concatenate -tile x6 thumb.00-*.jpg result.jpg
 
 dir_repo="RaphaelRaabe.github.io"
 dir_data="_data"
