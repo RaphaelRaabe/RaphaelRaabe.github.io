@@ -13,7 +13,7 @@ jobs:
       
       - name: 1. Reducing image sizes to 1920px
         run: |
-          for f in *.jpg; do
+          for f in *.{jpg,jpeg}; do
               width=$(identify -format '%w' "$f")
               height=$(identify -format '%h' "$f")
               if [ $width -gt 1920 ] && [ $height -gt 1920 ]; then
@@ -24,12 +24,12 @@ jobs:
 
       - name: 2. Generating suffixes for image files
         run: |
-          for f in *.jpg; do
+          for f in *.{jpg,jpeg}; do
             nf="${f%-*}";
             [ "$f" != "$nf" ] && mv "$f" "$nf" && mv "$nf" "$nf.jpg";
           done
 
-          for f in *.jpg; do
+          for f in *.{jpg,jpeg}; do
             suffix=$(identify -format '%wx%h' "$f")
             mv "$f" "${f%.*}-$suffix.jpg"
           done
@@ -41,7 +41,7 @@ jobs:
           [ -d "$dir_thumb" ] && rm -rf "$dir_thumb"
           mkdir "$dir_thumb"
           w=200
-          for f in *.jpg; do
+          for f in *.{jpg,jpeg}; do
             nf="thumb.${f%-*}.jpg"
             convert -thumbnail "$w" "$f" "$nf" && mv $nf "$dir_thumb/"
           done
@@ -51,7 +51,7 @@ jobs:
         run: |
           fil_csv="paintings.csv"
           echo "name,orig,thumb" > $fil_csv
-          for f in ../img/paintings/*.jpg; do
+          for f in ../img/paintings/*.{jpg,jpeg}; do
             raw=$(readlink -f "$f")
             filename="${raw##*/}"
             name="${filename%.*}"
