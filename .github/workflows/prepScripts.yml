@@ -13,6 +13,8 @@ jobs:
       
       - name: 1. Reducing image sizes to 1920px
         run: |
+          shopt -s nullglob # Sets nullglob
+          shopt -s nocaseglob # Sets nocaseglob
           for f in *.{jpg,jpeg}; do
               width=$(identify -format '%w' "$f")
               height=$(identify -format '%h' "$f")
@@ -20,10 +22,14 @@ jobs:
                 [ $width -ge $height ] && convert -thumbnail "1920" "$f" "$f" || convert -thumbnail "x1920" "$f" "$f"
               fi
           done
+          shopt -u nocaseglob # Unsets nocaseglob
+          shopt -u nullglob # Unsets nullglob
         working-directory: img/paintings/
 
       - name: 2. Generating suffixes for image files
         run: |
+          shopt -s nullglob # Sets nullglob
+          shopt -s nocaseglob # Sets nocaseglob
           for f in *.{jpg,jpeg}; do
             nf="${f%-*}";
             [ "$f" != "$nf" ] && mv "$f" "$nf" && mv "$nf" "$nf.jpg";
@@ -33,6 +39,8 @@ jobs:
             suffix=$(identify -format '%wx%h' "$f")
             mv "$f" "${f%.*}-$suffix.jpg"
           done
+          shopt -u nocaseglob # Unsets nocaseglob
+          shopt -u nullglob # Unsets nullglob
         working-directory: img/paintings/
 
       - name: 3. Generating thumbnails
@@ -41,16 +49,22 @@ jobs:
           [ -d "$dir_thumb" ] && rm -rf "$dir_thumb"
           mkdir "$dir_thumb"
           w=200
+          shopt -s nullglob # Sets nullglob
+          shopt -s nocaseglob # Sets nocaseglob
           for f in *.{jpg,jpeg}; do
             nf="thumb.${f%-*}.jpg"
             convert -thumbnail "$w" "$f" "$nf" && mv $nf "$dir_thumb/"
           done
+          shopt -u nocaseglob # Unsets nocaseglob
+          shopt -u nullglob # Unsets nullglob
         working-directory: img/paintings/
 
       - name: 4. Writing paintigs.csv-file
         run: |
           fil_csv="paintings.csv"
           echo "name,orig,thumb" > $fil_csv
+          shopt -s nullglob # Sets nullglob
+          shopt -s nocaseglob # Sets nocaseglob
           for f in ../img/paintings/*.{jpg,jpeg}; do
             raw=$(readlink -f "$f")
             filename="${raw##*/}"
@@ -59,6 +73,8 @@ jobs:
             thumb="/img/thumb/thumb.${name%-*}.jpg"
             echo "$name,$orig,$thumb" >> $fil_csv
           done
+          shopt -u nocaseglob # Unsets nocaseglob
+          shopt -u nullglob # Unsets nullglob
         working-directory: _data/
       - name: 5. Commit and push automated preparation
         run: |
