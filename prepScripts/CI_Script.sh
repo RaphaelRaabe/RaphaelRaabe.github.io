@@ -34,6 +34,8 @@ done
 echo "2. Generating suffixes for image files"
 for f in *.{jpg,jpeg}; do
   nf="${f%-*}";
+  # [ "${nf: -1}" = "-" ] && echo "#######bla" && nf="${f%.*}"
+  [ "${#nf}" -lt 3 ] && nf="${f%.*}"
   [ "$f" != "$nf" ] && mv "$f" "$nf" && mv "$nf" "$nf.jpg";
 done
 for f in *.{jpg,jpeg}; do
