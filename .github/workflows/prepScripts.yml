@@ -81,11 +81,11 @@ jobs:
       - name: 5. Commit and push automated preparation
         run: |
           git config --global user.name 'BOT'
-          git config --global user.email 'piano337@users.noreply.github.com'
+          git config --global user.email 'RaphaelRaabe@users.noreply.github.com'
           if [ -z "$(git status --porcelain)" ]; then
             echo "No changes in the paintings"
           else
             git add .
-            git commit -m "#Bot: automated prepScripts"
+            git commit -m ":robot: - AutoPrepScripts"
             git push
           fi
