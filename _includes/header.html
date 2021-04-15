@@ -16,7 +16,12 @@
     {%- if page.url contains "/en/" -%}
       <a class="site-language-change" href="{{ lang_switch_url | replace: "/en/", "/" }}">&#127465;&#127466;</a>
     {%- else -%}
-      <a class="site-language-change" href="{{ lang_switch_url | prepend: "/en" }}">&#127468;&#127463;</a>
+      {%- if page.title == "Impressum" -%}
+        {%- assign lang_switch_url = page.url -%}
+      {%- else -%}
+        {%- assign lang_switch_url = lang_switch_url | prepend: "/en" -%}
+      {%- endif -%}
+      <a class="site-language-change" href="{{ lang_switch_url }}">&#127468;&#127463;</a>
     {%- endif -%}
 
     <a class="site-undertitle" href="{{ site.friendsURL }}"><br/>...{{ site.undertitle | escape }}</a>
