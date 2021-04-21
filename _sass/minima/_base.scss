@@ -66,6 +66,22 @@ main {
   display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
 }
 
+
+@keyframes transitionIn {
+  from {
+   opacity: 0;
+   transform: rotateX(-10deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}
+
+img{
+  animation: transitionIn 1.5s;
+}
 /**
  * Circular Profile Picture
  */
