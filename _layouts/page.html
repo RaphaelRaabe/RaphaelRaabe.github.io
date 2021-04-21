@@ -2,46 +2,10 @@
 layout: default
 ---
 <article class="post">
-
   <header class="post-header">
-    <h1 class="post-title">{{ page.title | escape }}</h1>
+    <h1 class="post-title">{{ page.title | escape }}
   </header>
-  
   <div class="post-content">
     {{ content }}
   </div>
-
-  {%- if page.name contains "-blog.md" -%}
-
-    <!-- Differenciate between projects and news  -->
-    {%- if page.name == "de-blog.md" -%}
-      {% assign post_list = site.de-blog %}
-    {%- elsif page.name == "en-blog.md" -%}
-      {% assign post_list = site.en-blog %}
-    {%- endif -%}
-
-    {%- if post_list.size > 0 -%}
-      <!-- <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2> -->
-      <ul class="post-list">
-        {%- for post in post_list -%}
-        <li>
-            {%- assign date_format = site.minima.date_format | default: "%d.%m.%Y" -%}
-          {%- if page.url contains "/en/" -%}
-            {%- assign date_format = site.minima.date_format | default: "%d/%m/%Y" -%}
-          {%- endif -%}
-          <span class="post-meta">{{ post.date | date: date_format }}</span>
-          <h3>
-            <a class="post-link" href="{{ post.url | relative_url }}">
-              {{ post.title | escape }}
-            </a>
-          </h3>
-          {%- if site.show_excerpts -%}
-            {{ post.excerpt }}
-          {%- endif -%}
-        </li>
-        {%- endfor -%}
-      </ul>
-      <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->
-    {%- endif -%}
-  {%- endif -%}
 </article>

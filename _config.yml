@@ -1,4 +1,3 @@
-# Site settings: Custom variableaccessible via {{ site.myvariable }}.
 title: Raphael Raabe
 undertitle: Seline Bezen
 friendsURL: https://selinebezen.github.io/
@@ -7,21 +6,13 @@ description: >-
   Offizielle Webseite des Künstlers Raphael Raabe.
 en-description: >-
   Official Website of Artist Raphael Raabe.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: ""
+url: ""
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
-
-collections:
-  de-blog:
-    permalink: blog/:year:month:day/:title
-    output: true
-  en-blog:
-    permalink: en/blog/:year:month:day/:title
-    output: true
 
 include:
   - _pages

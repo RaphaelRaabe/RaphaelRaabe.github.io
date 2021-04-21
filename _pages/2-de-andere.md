@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Tiere
-permalink: /galerie/tiere/
+title: Andere
+permalink: /galerie/2/
 ---
 
 {% include gallery.html %}

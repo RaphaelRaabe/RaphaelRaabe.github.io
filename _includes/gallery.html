@@ -1,15 +1,15 @@
 <div class="my-gallery">
   {% for painting in site.data.paintings %}
   {%- assign p = painting.name | slice: 0,2 -%}
-  {%- if p == "00" and page.url contains "/galerie/menschen/" -%}
+  {%- if p == "00" and page.url contains "/galerie/0/" -%}
   <figure>
     <a href="{{ painting.orig }}" filename="{{ painting.name }}"><img data-src="{{ painting.thumb }}" alt="{{ painting.name }}"></a>
   </figure>
-  {%- elsif p == "01" and page.url contains "/galerie/tiere/" -%}
+  {%- elsif p == "01" and page.url contains "/galerie/1/" -%}
   <figure>
     <a href="{{ painting.orig }}" filename="{{ painting.name }}"><img data-src="{{ painting.thumb }}" alt="{{ painting.name }}"></a>
   </figure>
-  {%- elsif p == "02" and page.url contains "/galerie/andere/" -%}
+  {%- elsif p == "02" and page.url contains "/galerie/2/" -%}
   <figure>
     <a href="{{ painting.orig }}" filename="{{ painting.name }}"><img data-src="{{ painting.thumb }}" alt="{{ painting.name }}"></a>
   </figure>
