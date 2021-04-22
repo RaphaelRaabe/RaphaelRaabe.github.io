@@ -33,4 +33,3 @@ name,orig,thumb
 01-wolf-1600x1041,/img/paintings/01-wolf-1600x1041.jpg,/img/thumb/thumb.01-wolf.jpg
 02-auge-1600x1208,/img/paintings/02-auge-1600x1208.jpg,/img/thumb/thumb.02-auge.jpg
 02-auge2-1170x1600,/img/paintings/02-auge2-1170x1600.jpg,/img/thumb/thumb.02-auge2.jpg
-*,/img/paintings/*.jpeg,/img/thumb/thumb.*.jpg
