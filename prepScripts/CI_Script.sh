@@ -21,12 +21,12 @@ changeDirToDesired(){
 
 ############################################
 changeDirToDesired $dir_paintings
-echo "1. Reducing image sizes to 1920px"
+echo "1. Reducing image sizes to 1600px"
 for f in *.{jpg,jpeg}; do
     width=$(identify -format '%w' "$f")
     height=$(identify -format '%h' "$f")
-    if [ $width -gt 1920 ] && [ $height -gt 1920 ]; then
-      [ $width -ge $height ] && convert -thumbnail "1920" "$f" "$f" || convert -thumbnail "x1920" "$f" "$f"
+    if [ $width -gt 1600 ] || [ $height -gt 1600 ]; then
+      [ $width -ge $height ] && convert -strip -thumbnail "1600" "$f" "$f" || convert -strip -thumbnail "x1600" "$f" "$f"
     fi
 done
 
@@ -51,7 +51,7 @@ mkdir "$dir_thumb"
 w=200
 for f in *.{jpg,jpeg}; do
   nf="thumb.${f%-*}.jpg"
-  convert -thumbnail "$w" "$f" "$nf" && mv $nf "$dir_thumb/"
+  convert -strip -thumbnail "$w" "$f" "$nf" && mv $nf "$dir_thumb/"
 done
 
 ############################################

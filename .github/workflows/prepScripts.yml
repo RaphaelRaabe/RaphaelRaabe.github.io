@@ -18,7 +18,7 @@ jobs:
           for f in *.{jpg,jpeg}; do
               width=$(identify -format '%w' "$f")
               height=$(identify -format '%h' "$f")
-              if [ $width -gt 1600 ] && [ $height -gt 1600 ]; then
+              if [ $width -gt 1600 ] || [ $height -gt 1600 ]; then
                 [ $width -ge $height ] && convert -strip -thumbnail "1600" "$f" "$f" || convert -strip -thumbnail "x1600" "$f" "$f"
               fi
           done
