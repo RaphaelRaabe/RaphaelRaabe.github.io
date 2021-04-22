@@ -1,17 +1,17 @@
-<div class="my-gallery">
+<div class="my-gallery fadeIn">
   {% for painting in site.data.paintings %}
   {%- assign p = painting.name | slice: 0,2 -%}
   {%- if p == "00" and page.url contains "/galerie/0/" -%}
   <figure>
-    <a href="{{ painting.orig }}" filename="{{ painting.name }}"><img data-src="{{ painting.thumb }}" alt="{{ painting.name }}"></a>
+    <a href="{{ painting.orig }}" filename="{{ painting.name }}"><img data-src="{{ painting.thumb }}" alt="{{ painting.name }}" loading="lazy"></a>
   </figure>
   {%- elsif p == "01" and page.url contains "/galerie/1/" -%}
   <figure>
-    <a href="{{ painting.orig }}" filename="{{ painting.name }}"><img data-src="{{ painting.thumb }}" alt="{{ painting.name }}"></a>
+    <a href="{{ painting.orig }}" filename="{{ painting.name }}"><img data-src="{{ painting.thumb }}" alt="{{ painting.name }}" loading="lazy"></a>
   </figure>
   {%- elsif p == "02" and page.url contains "/galerie/2/" -%}
   <figure>
-    <a href="{{ painting.orig }}" filename="{{ painting.name }}"><img data-src="{{ painting.thumb }}" alt="{{ painting.name }}"></a>
+    <a href="{{ painting.orig }}" filename="{{ painting.name }}"><img data-src="{{ painting.thumb }}" alt="{{ painting.name }}" loading="lazy"></a>
   </figure>
   {%- endif -%}
   {% endfor %}

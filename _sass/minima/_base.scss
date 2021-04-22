@@ -79,13 +79,13 @@ main {
   }
 }
 
-img{
+.fadeIn{
   animation: transitionIn 1.5s;
 }
 /**
  * Circular Profile Picture
  */
-img[src*="#circularProfile"] {
+.circularProfile{
   /* display: block;
   margin-left: auto;
   margin-right: auto; */

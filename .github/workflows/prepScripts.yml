@@ -11,15 +11,15 @@ jobs:
       - name: 0. Installing imagemagick
         run: sudo apt-get install imagemagick
       
-      - name: 1. Reducing image sizes to 1920px
+      - name: 1. Reducing image sizes to 1600px
         run: |
           shopt -s nullglob # Sets nullglob
           shopt -s nocaseglob # Sets nocaseglob
           for f in *.{jpg,jpeg}; do
               width=$(identify -format '%w' "$f")
               height=$(identify -format '%h' "$f")
-              if [ $width -gt 1920 ] && [ $height -gt 1920 ]; then
-                [ $width -ge $height ] && convert -thumbnail "1920" "$f" "$f" || convert -thumbnail "x1920" "$f" "$f"
+              if [ $width -gt 1600 ] && [ $height -gt 1600 ]; then
+                [ $width -ge $height ] && convert -strip -thumbnail "1600" "$f" "$f" || convert -strip -thumbnail "x1600" "$f" "$f"
               fi
           done
           shopt -u nocaseglob # Unsets nocaseglob
@@ -50,12 +50,12 @@ jobs:
           dir_thumb="../thumb"
           [ -d "$dir_thumb" ] && rm -rf "$dir_thumb"
           mkdir "$dir_thumb"
-          w=200
+          w=168
           shopt -s nullglob # Sets nullglob
           shopt -s nocaseglob # Sets nocaseglob
           for f in *.{jpg,jpeg}; do
             nf="thumb.${f%-*}.jpg"
-            convert -thumbnail "$w" "$f" "$nf" && mv $nf "$dir_thumb/"
+            convert -strip -thumbnail "$w" "$f" "$nf" && mv $nf "$dir_thumb/"
           done
           shopt -u nocaseglob # Unsets nocaseglob
           shopt -u nullglob # Unsets nullglob

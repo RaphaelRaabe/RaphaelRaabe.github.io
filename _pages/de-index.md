@@ -4,7 +4,7 @@ language: de
 permalink: /
 ---
 
-![Maske](/img/profil.jpg#circularProfile)
+<img src="/img/profil.jpg" alt="Maske" class="circularProfile fadeIn">
 
 Ich bin Raphael Raabe. Das stimmt nicht ganz. Das ist nur ein Künstlername. Eigentlich weiß ich nicht, wer ich bin. Selbst wenn hier mein echter Name stünde, würde mein erster Satz nicht wahr sein. Ich bin nämlich definitiv nicht mein Name.
 
